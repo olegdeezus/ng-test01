@@ -1,0 +1,41 @@
+@import '../../styles.scss';
+
+:host {
+  position: relative;
+}
+
+input, textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 0.5 * $unit;
+  line-height: 2 * $unit;
+}
+
+button {
+  padding: 0.5 * $unit;
+  line-height: 2 * $unit;
+  font-size: 1rem;
+}
+
+.pending {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 100%, .8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5 * $unit;
+  padding: 0.5 * $unit;
+
+  & > label {
+    margin-bottom: 0.5 * $unit;
+  }
+}
