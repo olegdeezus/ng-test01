@@ -1,1 +1,4 @@
-<app-list></app-list>
+<section class="top">
+  <app-description [description]="description"></app-description>
+</section>
+<app-list (select)="select($event)"></app-list>

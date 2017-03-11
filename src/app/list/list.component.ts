@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 const list = [
   { title: 'Item One', description: 'Description for item one' },
@@ -46,10 +46,12 @@ const list = [
 export class ListComponent implements OnInit {
 
   list = list;
-  selected = 0;
+  selected: number;
+  @Output() select = new EventEmitter();
 
-  select (index) {
+  onSelect (index) {
     this.selected = index;
+    this.select.emit(this.list[index]);
   }
 
   constructor() { }
