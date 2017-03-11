@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+$background: #ffffff;
+$background-dark: #eeeeee;
+$gray: #aaaaaa;
+$footer-height: 50px;
+$max-width: 500px;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-dark;
+}
+
+.wrapper {
+  width: 50%;
+  max-width: $max-width;
+  min-height: 100%;
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+app-root {
+  flex: 1;
+}
+
+footer {
+  height: $footer-height - 20px;
+  background-color: $gray;
+  padding: 10px;
+}
