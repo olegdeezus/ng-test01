@@ -1,0 +1,15 @@
+@import '../../styles.scss';
+
+.item {
+  padding: $unit;
+  border-bottom: 1px solid $background-dark;
+
+  &:not(.item--selected):hover {
+    background-color: $primary-lightest;
+  }
+}
+
+.item--selected {
+  background-color: $primary;
+  color: $background;
+}

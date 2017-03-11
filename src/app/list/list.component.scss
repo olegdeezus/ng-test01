@@ -1,0 +1,12 @@
+@import '../../styles.scss';
+
+:host {
+  flex: 1 1;
+  overflow-y: auto;
+}
+
+.empty-list-warning {
+  text-align: center;
+  color: $gray;
+  padding: 10px;
+}
