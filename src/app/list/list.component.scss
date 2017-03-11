@@ -3,10 +3,23 @@
 :host {
   flex: 1 1;
   overflow-y: auto;
+  position: relative;
 }
 
 .empty-list-warning {
   text-align: center;
   color: $gray;
   padding: 10px;
+}
+
+.pending {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

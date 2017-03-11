@@ -5,4 +5,7 @@
   [isSelected]="i === selected"
 ></app-item>
 <div class="empty-list-warning" *ngIf="!list.length">Item list is empty yet</div>
+<div class="pending" *ngIf="isPending">
+  <img src="assets/spinner.svg" alt="">
+</div>
 

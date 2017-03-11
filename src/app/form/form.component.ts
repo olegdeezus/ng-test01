@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import api from '../../api';
 
 @Component({
   selector: 'app-form',
@@ -11,16 +12,16 @@ export class FormComponent implements OnInit {
 
   onCreate (nameInput, descriptionInput) {
     this.isPending = true;
+    const name = nameInput.value;
+    const description = descriptionInput.value;
 
-    setTimeout(() => {
-      this.create.emit({
-        name: nameInput.value,
-        description: descriptionInput.value
+    api.createItem(name, description)
+      .then(() => {
+        this.create.emit({name, description });
+        this.isPending = false;
+        nameInput.value = '';
+        descriptionInput.value = '';
       });
-      this.isPending = false;
-      nameInput.value = '';
-      descriptionInput.value = '';
-    }, 1500);
   }
 
   constructor() { }

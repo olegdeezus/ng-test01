@@ -46,6 +46,7 @@ const list = [
 export class ListComponent implements OnInit {
 
   @Input() list: {name: string, description: string}[];
+  @Input() isPending: boolean;
   selected: number;
   @Output() select = new EventEmitter();
 
